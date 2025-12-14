@@ -270,6 +270,16 @@
   });
 
 
+      // Show Library section when #library-section is in URL or link is clicked
+    if (window.location.hash === '#library-section') {
+        $('#library-section').show();
+    }
+
+    $(document).on('click', 'a[href="#library-section"]', function(e) {
+        // e.preventDefault();  // Uncomment if you don't want page jump (but your onePageClick already handles smooth scroll)
+        $('#library-section').show();
+    });
+
 
 
 
